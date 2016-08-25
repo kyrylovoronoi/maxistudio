@@ -56,7 +56,7 @@
     };
 
     function isValidPhone(phoneNumber) {
-        var pattern = new RegExp(/^\d+$/);
+        var pattern = new RegExp(/^[\d-]+$/);
         //var pattern = new RegExp(/^[+]?\d+$/);
         return pattern.test(phoneNumber);
     };

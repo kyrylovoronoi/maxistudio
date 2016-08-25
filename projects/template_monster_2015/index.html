@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="ключевые слова" />
+    <meta name="description" content="краткое описание страницы" />
+    <title>Main</title>
+
+    <!--CSS-->
+    <link rel='stylesheet' href="css/reset.min.css" />
+    <link rel='stylesheet' href="css/style.css" />
+
+    <!--Google Fonts-->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Bree+Serif'>
+
+    <!--Font Awesome-->
+    <link rel='stylesheet' href='libs/font-awesome/css/font-awesome.min.css'>
+
+    <!--JavaScript/jQuery-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+    <!--КНОПКА ВВЕРХ-->
+    <script src="js/scrollup.js"></script>
+
+    <!--ФИКСИРОВАНОЕ МЕНЮ-->
+    <script src="js/fixed_bar.js"></script>
+    <!--<script src="js/fixed_top_bar.js"></script>-->
+    <!--<script>
+        $(window).load(function () {
+            $(".top_bar").sticky({ topSpacing: 0 });
+        });
+    </script>-->
+
+    <!--ВЫПАДАЮЩЕЕ МЕНЮ-->
+    <link rel="stylesheet" href="css/drop_menu.min.css" />
+
+    <!--СЛАЙДЕР-->
+    <link rel="stylesheet" href="css/da_slider.css" />
+    <script src="js/slider.js"></script>
+    <script>
+        $(function () {
+            $('#da-slider').cslider({
+                autoplay: true,
+                bgincrement: 450,
+                current: 0,
+            });
+        });
+    </script>
+    <script src="libs/modernizr/modernizr.custom.28468.js"></script>
+
+    <!--МОДАЛЬНОЕ ОКНО-->
+    <link rel="stylesheet" href="css/lightcase.min.css">
+    <script src="js/lightcase.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('a[data-rel^=lightcase]').lightcase({
+                closeOnOverlayClick: true,
+                overlayOpacity: 0.9,
+            });
+        });
+    </script>
+
+    <!--АККОРДЕОН-->
+    <link rel="stylesheet" href="css/accordion.min.css" />
+
+    <!--КАРУСЕЛЬ-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <script src="js/carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#testimonials").owlCarousel({
+                singleItem: true,
+                pagination: true,
+                autoPlay: 5000,
+                transitionStyle: "fade",
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#latest_from_the_blog").owlCarousel({
+                items: 3,
+                navigation: true,
+                pagination: false,
+                navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
+            });
+        });
+    </script>
+
+    <!--ПРОГРЕСС БАР-->
+    <script src="js/progress_bar.js"></script>
+    <script>
+        $(function ($) {
+            $(".knob").knob({
+                change: function (value) {
+                },
+                release: function (value) {
+                    console.log("release : " + value);
+                },
+                cancel: function () {
+                    console.log("cancel : ", this);
+                },
+                draw: function () {
+                    if (this.$.data('skin') == 'tron') {
+                        this.cursorExt = 0.3;
+                        var a = this.arc(this.cv), pa, r = 1;
+                        this.g.lineWidth = this.lineWidth;
+                        if (this.o.displayPrevious) {
+                            pa = this.arc(this.v);
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.pColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                            this.g.stroke();
+                        }
+                        this.g.beginPath();
+                        this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                        this.g.stroke();
+                        this.g.lineWidth = 2;
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.o.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                        this.g.stroke();
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <main>
+        <!--1111111111111111111111111111111111111111111111111111111111111111111111-->
+        <div class="section1 cb">
+            <header class="top_bar">
+                <nav class="max_width">
+                    <a href="#"><img src="img/logo.png" alt="" /><h1>colorful flat</h1></a>
+                    <ul id="top_menu">
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li>
+                            <a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Lorem ipsum</a></li>
+                                <li><a href="#">Aenean massa</a></li>
+                                <li><a href="#">Nullam dictum felis</a></li>
+                                <li><a href="#">Aenean leo ligula</a></li>
+                                <li><a href="#">Curabitur ullamcorper</a></li>
+                                <li>
+                                    <a href="#">Item - Level 2</a>
+                                    <ul>
+                                        <li><a href="#">Sub item 1</a></li>
+                                        <li><a href="#">Sub item 2</a></li>
+                                        <li>
+                                            <a href="#">Item - Level 3</a>
+                                            <ul>
+                                                <li><a href="#">Sub sub item 1</a></li>
+                                                <li><a href="#">Sub sub item 2</a></li>
+                                                <li><a href="#">Item - Level 4</a></li>
+                                            </ul>
+                                        </li>	<!-- Level 3 END -->
+                                    </ul>
+                                </li>	<!-- Level 2 END -->
+                            </ul>
+                        </li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!--222222222222222222222222222222222222222222222222222222222222222222222-->
+        <div class="section2 cw">
+            <div id="da-slider" class="da-slider">
+                <div class="da-slide bg-slide1">
+                    <div class="slide">
+                        <h2>This Template<br>is Awesome!</h2>
+                        <p>In has brute virtute, mundi facete perfecto ius ne. Cu tota evertitur necessitatibus nec. Ei quo rebum zril electram, accusata iracundia ei his. Ad qui recusabo deseruisse, cu per odio nihil. Eu vide mucius mei. Maiorum tractatos instructior ut eos, graece graecis vix an, consul impetus mediocrem an his. Possit pericula argumentum vix ex.</p>
+                        <a href="#" class="submit">Read more</a>
+                    </div>
+                </div>
+                <div class="da-slide bg-slide2">
+                    <div class="slide">
+                        <h2>A Lot of Epic Ideas<br>in One Template</h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <a href="#" class="submit">Read more</a>
+                    </div>
+                </div>
+                <div class="da-slide bg-slide3">
+                    <div class="slide">
+                        <h2>Explore new<br>Possibilities</h2>
+                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                        <a href="#" class="submit">Read more</a>
+                    </div>
+                </div>
+                <nav class="da-arrows">
+                    <span class="da-arrows-prev"></span>
+                    <span class="da-arrows-next"></span>
+                </nav>
+            </div>
+        </div>
+        <!--333333333333333333333333333333333333333333333333333333333333333333333-->
+        <div class="section3 cb">
+            <div class="max_width great_ideas">
+                <div>
+                    <div>
+                        <a href="#"><img src="img/pic31.png" alt="" /></a>
+                    </div>
+                    <h2>Flat Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div>
+                    <div class="pic">
+                        <a href="#"><img src="img/pic32.png" alt="" /></a>
+                    </div>
+                    <h2>Great Ideas</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div>
+                    <div>
+                        <a href="#"><img src="img/pic33.png" alt="" /></a>
+                    </div>
+                    <h2>Browser  Compatibility</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+            </div>
+        </div>
+        <!--444444444444444444444444444444444444444444444444444444444444444444444-->
+        <div class="section4 cw">
+            <section class="max_width recent_templates">
+                <h1>recent templates</h1>
+                <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </p>
+                <nav>
+                    <ul>
+                        <li><a href="#">duo eu</a></li>
+                        <li><a href="#">noster</a></li>
+                        <li><a href="#">quaeque</a></li>
+                        <li><a href="#">delicata</a></li>
+                        <li><a href="#">aliquando</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <div>
+                        <a href="img/pic41.png" id="example3" class="showcase" data-rel="lightcase">
+                            <img src="img/pic41.png" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/pic42.png" id="example3" class="showcase" data-rel="lightcase">
+                            <img src="img/pic42.png" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/pic43.png" id="example3" class="showcase" data-rel="lightcase">
+                            <img src="img/pic43.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="img/pic44.png" id="example3" class="showcase" data-rel="lightcase">
+                            <img src="img/pic44.png" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/pic45.png" id="example3" class="showcase" data-rel="lightcase">
+                            <img src="img/pic45.png" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/pic46.png" id="example3" class="showcase" data-rel="lightcase">
+                            <img src="img/pic46.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <a class="submit" href="#">show more</a>
+            </section>
+        </div>
+        <!--55555555555555555555555555555555555555555555555555555555555555555555555-->
+        <div class="section5 cb">
+            <section class="max_width template_features">
+                <h1>Template Features</h1>
+                <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                <div>
+                    <img src="img/pic51.png" alt="" />
+                    <h2>Liber option civibus</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. Iudico maiorum antiopam ut eam. Noster indoctum his no, <a href="#">apeirian torquatos</a> complectitur id sea, impedit eligendi eu eos. Vocibus constituto eu sipri et</p>
+                </div>
+                <div>
+                    <img src="img/pic52.png" alt="" />
+                    <h2>Noster indoctum his no</h2>
+                    <p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. Iudico maiorum antiopam ut eam. Noster indoctum his no, apeirian torquatos complectitur id sea, impedit eligendi eu eos. Vocibus constituto eu sipri et</p>
+                </div>
+                <div>
+                    <div>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Sed et quam est</li>
+                            <li>Mauris faucibus tellus ac auctor posuere</li>
+                            <li>Ludico maiorum antiopam ut eam</li>
+                            <li>Noster indoctum his no</li>
+                            <li>Apeirian torquatos complectitur id sea</li>
+                            <li>Impedit eligendi eu eos</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Sed et quam est</li>
+                            <li>Mauris faucibus tellus ac auctor posuere</li>
+                            <li>Ludico maiorum antiopam ut eam</li>
+                            <li>Noster indoctum his no</li>
+                            <li>Apeirian torquatos complectitur id sea</li>
+                            <li>Impedit eligendi eu eos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Sed et quam est</li>
+                            <li>Mauris faucibus tellus ac auctor posuere</li>
+                            <li>Ludico maiorum antiopam ut eam</li>
+                            <li>Noster indoctum his no</li>
+                            <li>Apeirian torquatos complectitur id sea</li>
+                            <li>Impedit eligendi eu eos</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Sed et quam est</li>
+                            <li>Mauris faucibus tellus ac auctor posuere</li>
+                            <li>Ludico maiorum antiopam ut eam</li>
+                            <li>Noster indoctum his no</li>
+                            <li>Apeirian torquatos complectitur id sea</li>
+                            <li>Impedit eligendi eu eos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--6666666666666666666666666666666666666666666666666666666666666666666666-->
+        <div class="section6 cw">
+            <div class="max_width template_advantages">
+                <div>
+                    <h1>Template advantages</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div>
+                    <div>
+                        <div><p>1.</p></div>
+                        <h2>Cu tantas platonem</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                    <div>
+                        <div><p>2.</p></div>
+                        <h2>Aperiam suscipiantur</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                    <div>
+                        <div><p>3.</p></div>
+                        <h2>Nusquam facilisis</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                    <div>
+                        <div><p>4.</p></div>
+                        <h2>Ex vel legimus</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><p>5.</p></div>
+                        <h2>Aliquando vulputate</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                    <div>
+                        <div><p>6.</p></div>
+                        <h2>Ea nominati</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                    <div>
+                        <div><p>7.</p></div>
+                        <h2>Dissentiunt id</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                    <div>
+                        <div><p>8.</p></div>
+                        <h2>Numquam argumentum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--7777777777777777777777777777777777777777777777777777777777777777777777-->
+        <div class="section7 cb">
+            <div class="max_width meet_the_team">
+                <div>
+                    <h1>meet the team</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div>
+                    <img src="img/face71.png" alt="" />
+                    <h2>John Smith</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    <div>
+                        <a class="ico" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="ico" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="ico" href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/face72.png" alt="" />
+                    <h2>Helen Armstrong</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    <div>
+                        <a class="ico" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="ico" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="ico" href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/face73.png" alt="" />
+                    <h2>Adam Sandler</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                    <div>
+                        <a class="ico" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="ico" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="ico" href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--8888888888888888888888888888888888888888888888888888888888888888888888-->
+        <div class="section8 cw">
+            <div class="max_width testimonials">
+                <div>
+                    <h1>Testimonials</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div id="testimonials" class="owl-carousel">
+                    <div class="item">
+                        <div class="left pic81">
+                        </div>
+                        <div class="right">
+                            <h2>Ruby Teylor, <span>visitor</span></h2>
+                            <div class="blockquote">
+                                <p>Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis, sit no persius aliquam. Pro ad eripuit dolorum percipit, est percipit ocurreret ex. Cu ignota audiam facilis eum, vim te vide contentiones, nostrud commune gubergren per no.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="left pic82">
+                        </div>
+                        <div class="right">
+                            <h2>Adam Law, <span>client</span></h2>
+                            <div class="blockquote">
+                                <p>Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis, sit no persius aliquam. Pro ad eripuit dolorum percipit, est percipit ocurreret ex. Cu ignota audiam facilis eum, vim te vide contentiones, nostrud commune gubergren per no.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="left pic83">
+                        </div>
+                        <div class="right">
+                            <h2>Rob Singer, <span>visitor</span></h2>
+                            <div class="blockquote">
+                                <p>Vis quaeque inermis atomorum cu. Aperiam suscipiantur at pro. Nec paulo essent hendrerit ut, mel cu oblique eripuit maiestatis, sit no persius aliquam. Pro ad eripuit dolorum percipit, est percipit ocurreret ex. Cu ignota audiam facilis eum, vim te vide contentiones, nostrud commune gubergren per no.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--9999999999999999999999999999999999999999999999999999999999999999999999-->
+        <div class="section9">
+            <div class="max_width how_it_works">
+                <div>
+                    <h1>how it works</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/YPlzeqCV1Ss" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h2>Nusquam facilisis no mea, solet utroque te ius, est noluisse inimicus dissentiunt id</h2>
+                        <p>Ex vel legimus intellegat, ex eam voluptaria conclusionemque, nam ei fabulas vulputate. Ea nominati imperdiet cotidieque nam. Nusquam facilisis no mea, solet utroque te ius, est noluisse inimicus dissentiunt id. Pro mazim equidem fastidii te, eripuit definiebas ne mei. Pro iusto hendrerit in, vel ei exerci eripuit omittam. Eu vis adhuc aliquando vulputate, at laudem omnesque lobortis pro, nec eu nusquam salutatus.</p>
+                        <p>Lorem ipsum dolor sit amet, vis dicit invenire ei. In nam affert perfecto, amet instructior ex vim. Ius mucius audire cu, vix eu zril numquam argumentum. Diam utinam ridens has ex, an veri putant eripuit per. No qui denique molestie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--0000000000000000000000000000000000000000000000000000000000000000000000-->
+        <div class="section10 cb">
+            <div class="max_width template_properties">
+                <div>
+                    <h1>template properties</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div>
+                    <div>
+                        <input class="knob" data-width="169" data-min="0" value="92" data-fgcolor="#a4d0d9" data-bgcolor="#d7eaee" data-thickness="0.15">
+                    </div>
+                    <div>
+                        <input class="knob" data-width="169" data-min="0" value="86" data-fgcolor="#9bd6a6" data-bgcolor="#e4edd8" data-thickness="0.15">
+                    </div>
+                    <div>
+                        <input class="knob" data-width="169" data-min="0" value="78" data-fgcolor="#fbbd66" data-bgcolor="#fde3be" data-thickness="0.15">
+                    </div>
+                    <div>
+                        <input class="knob" data-width="169" data-min="0" value="75" data-fgcolor="#026b7e" data-bgcolor="#72acb7" data-thickness="0.15" /> <!--data-readonly=true-->
+                    </div>
+                </div>
+                <div>
+                    <a href="#"><h2>Liber option civibus</h2></a>
+                    <a href="#"><h2>Vis quaeque inermis</h2></a>
+                    <a href="#"><h2>Lorem ipsum dolor</h2></a>
+                    <a href="#"><h2>Diam utinam ridens</h2></a>
+                </div>
+            </div>
+        </div>
+
+        <!--1111111111111111111111111111111111111111111111111111111111111111111111-->
+        <div class="section11 cb">
+            <div class="max_width faq">
+                <div>
+                    <h1>faq's</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <section class="ac-container">
+                    <div>
+                        <input id="ac-1" name="accordion-1" type="checkbox" />
+                        <label for="ac-1">Vivamus eget nibh. Etiam cursus leo vel metus. Nulla</label>
+                        <article class="ac-small">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
+                        </article>
+                    </div>
+                    <div>
+                        <input id="ac-2" name="accordion-1" type="checkbox" />
+                        <label for="ac-2">Noster indoctum his no, apeirian torquatos</label>
+                        <article class="ac-small">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="ac-container">
+                    <div>
+                        <input id="ac-3" name="accordion-1" type="checkbox" />
+                        <label for="ac-3">Diam utinam ridens has ex, an veri putant</label>
+                        <article class="ac-small">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
+                        </article>
+                    </div>
+                    <div>
+                        <input id="ac-4" name="accordion-1" type="checkbox" />
+                        <label for="ac-4">Diam utinam ridens has ex, an veri putant</label>
+                        <article class="ac-small">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="ac-container">
+                    <div>
+                        <input id="ac-5" name="accordion-1" type="checkbox" />
+                        <label for="ac-5">Noster indoctum his no, apeirian torquatos</label>
+                        <article class="ac-small">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
+                        </article>
+                    </div>
+                    <div>
+                        <input id="ac-6" name="accordion-1" type="checkbox" />
+                        <label for="ac-6">Diam utinam ridens has ex, an veri putant</label>
+                        <article class="ac-small">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--2222222222222222222222222222222222222222222222222222222222222222222222-->
+        <div class="section12 cw">
+            <div class="max_width latest_from_the_blog">
+                <div>
+                    <h1>latest from the blog</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div id="latest_from_the_blog" class="owl-carousel">
+                    <div class="item">
+                        <div class="height pic121">
+                            <h2>JUN 21, 2015</h2>
+                        </div>
+                        <a href="#"><h2>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla</h2></a>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+                    </div>
+                    <div class="item">
+                        <div class="height pic122">
+                            <h2>JUN 23, 2015</h2>
+                        </div>
+                        <a href="#"><h2>Ludico maiorum antiopam ut eam maiorum</h2></a>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+                    </div>
+                    <div class="item">
+                        <div class="height pic123">
+                            <h2>JUN 25, 2015</h2>
+                        </div>
+                        <a href="#"><h2>Liber option civibus ut pri, nec ea aliquid delicata</h2></a>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+                    </div>
+                    <div class="item">
+                        <div class="height pic123">
+                            <h2>JUN 25, 2015</h2>
+                        </div>
+                        <a href="#"><h2>Liber option civibus ut pri, nec ea aliquid delicata</h2></a>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+                    </div>
+                    <div class="item">
+                        <div class="height pic123">
+                            <h2>JUN 25, 2015</h2>
+                        </div>
+                        <a href="#"><h2>Liber option civibus ut pri, nec ea aliquid delicata</h2></a>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--3333333333333333333333333333333333333333333333333333333333333333333333-->
+        <div class="section13 cb">
+            <div class="max_width our_partners">
+                <div>
+                    <h1>our partners</h1>
+                    <p class="after_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere.</p>
+                </div>
+                <div><a href=""><img src="img/pic131.png" alt="Alternate Text" /></a></div>
+                <div><a href=""><img src="img/pic132.png" alt="Alternate Text" /></a></div>
+                <div><a href=""><img src="img/pic133.png" alt="Alternate Text" /></a></div>
+                <div><a href=""><img src="img/pic134.png" alt="Alternate Text" /></a></div>
+                <div><a href=""><img src="img/pic135.png" alt="Alternate Text" /></a></div>
+                <div><a href=""><img src="img/pic136.png" alt="Alternate Text" /></a></div>
+                <div><a href=""><img src="img/pic137.png" alt="Alternate Text" /></a></div>
+            </div>
+        </div>
+
+        <!--4444444444444444444444444444444444444444444444444444444444444444444444-->
+        <div class="section14 cw">
+            <footer class="max_width contact_us">
+                <div>
+                    <h1>contact us</h1>
+                    <p>8901 Marmora Road, Glasgow, D04 89GR.</p>
+                    <p class="after_header">Telephone:  +1 800 603 6035</p>
+                </div>
+                <form>
+                    <div><input type="text" value="" placeholder="Name:" /></div>
+                    <div><input type="email" value="" placeholder="E-mail:" /></div>
+                    <div><textarea name="" cols="30" rows="10" placeholder="Message:"></textarea></div>
+                    <button class="buttion_submit">Submit</button>
+                </form>
+                <p>Colorful Flat © 2015. All Rights Reserved</p>
+            </footer>
+        </div>
+        <div class="section15">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6049.6578815287685!2d-74.00107970918522!3d40.69976487247457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1435237947946" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </main>
+    <a href="#" class="scrollup">Наверх</a>
+</body>
+</html>

@@ -1,52 +1,46 @@
 ﻿(function () {
 
-    // Cache selectors
-    var lastId,
-      menu = $(".header_menu"),
-      menuHeight = menu.outerHeight() + 1,
-      // All list items
-      menuItems = menu.find("a"),
-      // Anchors corresponding to menu items
-      scrollItems = menuItems.map(function () {
-          var item = $($(this).attr("href"));
-          if (item.length)
-          {
-              return item;
-          }
-      });
-
-    // Bind click handler to menu items
-    // so we can get a fancy scroll animation
-    menuItems.on("click", function (e) {
-        var href = $(this).attr("href"),
-          offsetTop = href === "#" ? 0 : $(href).offset().top - menuHeight + 1;
-        $('html, body').stop().animate({
-            scrollTop: offsetTop
-        }, 1000);
+    //Плавный скролл по якорям
+    $("a[href^='#']").on("click", function (e) {
+        var elementClick = $(this).attr("href");
+        var elementDestination = (elementClick === "#" ? 0 : $(elementClick).offset().top);
+        $("body").stop().animate({ scrollTop: elementDestination }, 1000);
         e.preventDefault();
+        return false;
     });
 
+    // Cache selectors
+    var lastId,
+      //menuHeight = $(".header_menu").outerHeight(),
+      // все ссылки меню, у которых есть атрибут href
+        menuItems = $(".header_menu").find("a")
+          .map(function () {
+              var item = $($(this).attr("href"));
+              if (item.length)
+                    { return item; }
+          });
     // Bind to scroll
     $(window).scroll(function () {
-        // Get container scroll position
-        var fromTop = $(this).scrollTop() + menuHeight;
 
-        // Get id of current scroll item
-        var cur = scrollItems.map(function () {
-            if ($(this).offset().top < fromTop)
+        // получаем текущую позицию на документе при скроле
+        var scrollPositionNow = $(this).scrollTop(); //+ menuHeight + 1;
+
+        // получаем элемент меню при текущем положении скроллинга
+        var cur = menuItems.map(function () {
+            if (scrollPositionNow >= $(this).offset().top)
+                console.log(cur);
                 return this;
         });
-        // Get the id of the current element
+
+        // получаем id текущего элемента
         cur = cur[cur.length - 1];
         var id = cur && cur.length ? cur[0].id : "";
 
-        if (lastId !== id)
-        {
+        if (lastId !== id) {
             lastId = id;
-            // Set/remove active class
-            menuItems
-              .parent().removeClass("active")
-              .end().filter("[href='#" + id + "']").parent().addClass("active");
+
+            // set/remove active class
+            menuItems.parent().removeClass("active").end().filter("[href='#" + id + "']").parent().addClass("active");
         }
     });
 

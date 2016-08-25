@@ -43,7 +43,7 @@
 
 
 //var a = "" && false;
-////alert(a);
+//alert(a);
 
 //var b = false && undefined && "вап";
 ////alert(b);

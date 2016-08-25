@@ -1,0 +1,111 @@
+/* Main menu */
+#fix_bar {
+    position: relative;
+}
+
+#top_menu {
+    float: right;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+    #top_menu > li {
+        margin: 0 3px 0 2px;
+        line-height: 51px;
+    }
+
+    #top_menu li {
+        float: right;
+        position: relative;
+    }
+
+    #top_menu > li:first-child {
+        margin-right: 0;
+    }
+
+    #top_menu > li:last-child {
+        margin-left: 0;
+    }
+
+    /*#top_menu li:first-child a {
+    padding-right: 0;
+}
+
+    #top_menu li:first-child a:hover {
+        padding-right: 0;
+    }*/
+
+    #top_menu > li a {
+        padding: 0 15px;
+        color: rgb(58, 73, 76);
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    #top_menu > li:hover a {
+        display: block;
+        border-radius: 5px;
+        background-color: rgb(58, 73, 76);
+        color: white;
+    }
+
+    /*Submenu*/
+    #top_menu li ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 99999;
+        background-color: rgb(58, 73, 76);
+        color: rgb(255, 255, 255);
+        text-align: left;
+        border-radius: 5px;
+    }
+
+    /* hide submenu */
+    #top_menu li:hover > ul {
+        display: block;
+    }
+
+    /* show submenu on hover */
+    #top_menu li ul li, #top_menu li ul li a {
+        float: none;
+        height: 35px; /* submenu item height */
+        line-height: 35px;
+        min-width: 150px; /* submenu item minimal width */
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    /* Submenu item */
+    #top_menu li ul li {
+        _display: inline; /* for IE */
+    }
+
+        /* == Sub-Sub Menu == */
+        #top_menu li ul li ul {
+            display: none;
+        }
+
+        #top_menu li ul li:hover ul {
+            left: 100%;
+            top: 0;
+        }
+
+        /* Menu Item text color */
+        #top_menu li ul li a, #top_menu li ul li a:hover {
+            color: rgb(255,255,255);
+        }
+
+            /* Menu Item background color on hover */
+            #top_menu li ul li a:hover {
+                background: rgba(246, 186, 68, 1);
+                color: black;
+                border-radius: 5px;
+            }

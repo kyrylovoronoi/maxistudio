@@ -14,13 +14,11 @@
 body {
     font-size: 1em;
     font-family: 'PT Sans Narrow', Tahoma, sans-serif;
-    /*font-family: 'PT Sans', Tahoma, sans-serif;*/
-    /*font-family: 'PTSansRegular', Tahoma, sans-serif;*/
     color: rgb(0,0,0);
 }
 
 .wrapper {
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 ol, ul {
@@ -176,13 +174,13 @@ header {
 
 .btn_link {
     display: inline-block;
+    vertical-align: top;
     text-transform: uppercase;
 }
 
 .header__link {
     color: rgb(255,255,255);
-    line-height: 47px;
-    border-bottom: 3px solid transparent;
+    line-height: 50px;
     font-size: 2em;
     padding: 0 15px;
     -moz-transition: font-size 1s 0.01s ease;
@@ -194,7 +192,6 @@ header {
     .header__link:hover {
         /*background-color: rgb(68,68,68);*/
         background-color: rgb(253,217,0);
-        border-bottom: 3px solid rgb(253,217,0);
         color: rgb(0,0,0);
         -moz-transition: background-color 0.1s 0.01s ease, border-bottom 0.1s 0.01s ease;
         -o-transition: background-color 0.1s 0.01s ease, border-bottom 0.1s 0.01s ease;
@@ -202,14 +199,38 @@ header {
         transition: background-color 0.1s 0.01s ease, border-bottom 0.1s 0.01s ease;
     }
 
-.active a {
-    border-bottom: 3px solid rgb(253,217,0);
+.active {
+    position: relative;
 }
+
+    .active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 5px;
+        background: rgb(253,217,0);
+    }
 /*<!------------------------------------------SECTION_1-->*/
 .wrap_wide__section1 {
-    background: url(../img/info-bg1.jpg) no-repeat;
+    /*background: url(../img/info-bg1.jpg) no-repeat;
     background-position: 50% 100%;
+    background-size: cover;*/
+}
+
+.sec1__bgvideo {
+    display: block;
+    background: url(../video/walkingAway.jpg) no-repeat center center;
     background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -9999;
 }
 
 .section1 {
@@ -270,12 +291,12 @@ header {
     height: 60px;
 }
 
-/*.button_go_portfolio:hover {
-    -webkit-animation-name: none;
-    -moz-animation-name: none;
-    -o-animation-name: none;
-    animation-name: none;
-}*/
+.btn_go_next:hover {
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
 
 @-moz-keyframes bounce {
     0% {
@@ -623,38 +644,38 @@ header {
     margin-right: 15px;
 }
 
-.link_social {
+.btn_social {
     width: 50px;
     height: 50px;
+    line-height: 50px;
     text-align: center;
     margin: 20px 5px 30px 0;
 }
 
 .svg_social {
-    width: 30px;
-    height: 50px;
+    vertical-align: middle;
+    width: 80%;
+    height: 80%;
     fill: rgb(255,255,255);
 }
 
-.background_twitter, .background_facebook, .background_vk {
+.btn_social_twitter, .btn_social_facebook, .btn_social_vk {
     background-color: rgb(69,69,69);
 }
 
-    .background_twitter:hover {
+    .btn_social_twitter:hover {
         background-color: rgb(30,198,255);
     }
 
-    .background_facebook:hover {
+    .btn_social_facebook:hover {
         background-color: rgb(59,89,153);
     }
 
-    .background_vk:hover {
+    .btn_social_vk:hover {
         background-color: rgb(76,117,163);
     }
 
-.hidden_only {
-    display: none;
-}
+
 
 
 
@@ -747,15 +768,11 @@ header {
         margin: 0 2%;
     }
 
-    .link_social {
+    .btn_social {
         width: 40px;
         height: 40px;
+        line-height: 40px;
         margin: 15px 5px 20px 0;
     }
 
-    .svg_social {
-        width: 30px;
-        height: 40px;
-        fill: rgb(255,255,255);
-    }
 }

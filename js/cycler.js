@@ -2,7 +2,7 @@
 
     var container = $('.words'),
         words = $('.words li'),
-        num = 0;
+        num = -1;
 
     var xDelay = 350,
         yDelay = 850,

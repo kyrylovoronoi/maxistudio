@@ -1,0 +1,132 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-align-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+}
+
+.container__nowrap {
+    -ms-flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.container [class*="grid_"] {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-start;
+}
+
+.container .grid_1 {
+    width: 8.33333%;
+}
+
+.container .grid_2 {
+    width: 16.66667%;
+}
+
+.container .grid_3 {
+    width: 25%;
+}
+
+.container .grid_4 {
+    width: 33.33333%;
+}
+
+.container .grid_5 {
+    width: 41.66667%;
+}
+
+.container .grid_6 {
+    width: 50%;
+}
+
+.container .grid_7 {
+    width: 58.33333%;
+}
+
+.container .grid_8 {
+    width: 66.66667%;
+}
+
+.container .grid_9 {
+    width: 75%;
+}
+
+.container .grid_10 {
+    width: 83.33333%;
+}
+
+.container .grid_11 {
+    width: 91.66667%;
+}
+
+.container .grid_12 {
+    width: 100%;
+}
+
+/*narrow desktops*/
+@media screen and (max-width: 1169px) {
+    .container {
+        width: 940px;
+    }
+}
+
+/*Target landscape smartphones, portrait tablets, narrow desktops*/
+@media screen and (orientation: landscape) and (min-width: 480px) and (max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+/*Target landscape smartphones, portrait tablets, narrow desktops*/
+@media screen and (orientation: portrait) and (min-width: 480px) and (max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+        .container .grid_1,
+        .container .grid_2,
+        .container .grid_3,
+        .container .grid_4,
+        .container .grid_5,
+        .container .grid_6 {
+            width: 50%;
+        }
+
+        .container .grid_7,
+        .container .grid_8,
+        .container .grid_9,
+        .container .grid_10,
+        .container .grid_11,
+        .container .grid_12 {
+            width: 100%;
+        }
+}
+
+/*Target portrait smartphones */
+@media screen and (max-width: 479px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+        .container [class*="grid_"] {
+            width: 100%;
+        }
+}
